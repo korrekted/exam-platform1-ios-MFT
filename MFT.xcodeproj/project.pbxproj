@@ -315,6 +315,8 @@
 
 /* Begin PBXFileReference section */
 		7588431838A5ED3413784861 /* Pods-MFT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MFT.release.xcconfig"; path = "Target Support Files/Pods-MFT/Pods-MFT.release.xcconfig"; sourceTree = "<group>"; };
+		B8F92F45282BDA0800EBBB24 /* MFT.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MFT.entitlements; sourceTree = "<group>"; };
+		B8F92F46282BDA3200EBBB24 /* StatsWidgetsExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StatsWidgetsExtension.entitlements; sourceTree = "<group>"; };
 		CD424D395410D52CDB880C99 /* Pods_MFT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MFT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7E9AA4DEC450C29AF069656 /* Pods-MFT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MFT.debug.xcconfig"; path = "Target Support Files/Pods-MFT/Pods-MFT.debug.xcconfig"; sourceTree = "<group>"; };
 		DE2D7157282A8FCB00B8952B /* MFT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MFT.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -630,6 +632,7 @@
 		DE2D714E282A8FCB00B8952B = {
 			isa = PBXGroup;
 			children = (
+				B8F92F46282BDA3200EBBB24 /* StatsWidgetsExtension.entitlements */,
 				DE2D7159282A8FCB00B8952B /* MFT */,
 				DE2D7178282A8FDA00B8952B /* StatsWidgets */,
 				DE2D7173282A8FDA00B8952B /* Frameworks */,
@@ -650,6 +653,7 @@
 		DE2D7159282A8FCB00B8952B /* MFT */ = {
 			isa = PBXGroup;
 			children = (
+				B8F92F45282BDA0800EBBB24 /* MFT.entitlements */,
 				DE2D71A3282A90C400B8952B /* Classes */,
 				DE2D7185282A8FE300B8952B /* Resource */,
 			);
@@ -2335,9 +2339,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = MFT/MFT.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = M73NH26C3Q;
+				DEVELOPMENT_TEAM = ZY9AXRCYBM;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MFT/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -2351,8 +2357,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = wed.MFT;
+				PRODUCT_BUNDLE_IDENTIFIER = exam.mft;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "MFT AppStore";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "MFT/Resource/MFT-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -2367,9 +2374,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = MFT/MFT.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = M73NH26C3Q;
+				DEVELOPMENT_TEAM = ZY9AXRCYBM;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MFT/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -2383,8 +2392,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = wed.MFT;
+				PRODUCT_BUNDLE_IDENTIFIER = exam.mft;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "MFT AppStore";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "MFT/Resource/MFT-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -2397,9 +2407,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = StatsWidgetsExtension.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = M73NH26C3Q;
+				DEVELOPMENT_TEAM = ZY9AXRCYBM;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = StatsWidgets/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = StatsWidgets;
@@ -2411,8 +2423,9 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = wed.MFT.StatsWidgets;
+				PRODUCT_BUNDLE_IDENTIFIER = exam.mft.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "MFT Widget AppStore";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -2425,9 +2438,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = StatsWidgetsExtension.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = M73NH26C3Q;
+				DEVELOPMENT_TEAM = ZY9AXRCYBM;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = StatsWidgets/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = StatsWidgets;
@@ -2439,8 +2454,9 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = wed.MFT.StatsWidgets;
+				PRODUCT_BUNDLE_IDENTIFIER = exam.mft.widget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "MFT Widget AppStore";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
